@@ -87,6 +87,13 @@ function Home() {
     setAnchorElUser(null);
   };
 
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const toggleDrawer = () => {
+    setOpenDrawer(!openDrawer);
+  };
+
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -151,7 +158,9 @@ function Home() {
                 ))}
               </Menu>
             </Box>
+
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+
             <Typography
               variant="h5"
               noWrap
@@ -215,7 +224,8 @@ function Home() {
           </Toolbar>
         </Container>
       </AppBar>
-
+      
+      <Button onClick={toggleDrawer}>Toggle Drawer</Button>
       <Drawer
         sx={{
           width: drawerWidth,
@@ -225,89 +235,79 @@ function Home() {
             boxSizing: "border-box",
           },
         }}
-        variant="permanent"
+        variant="temporary"
         anchor="left"
+        open={openDrawer}
+        onClose={toggleDrawer}
       >
         <Toolbar />
 
         <Divider />
 
         <List>
-          {["Dashboard"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 1 === 0 ? <DashboardIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem key="Dashboard" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton>
+          </ListItem>
         </List>
 
         <List>
-          {["Annonces"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 1 === 0 ? <CreateIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem key="Annonces" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <CreateIcon />
+              </ListItemIcon>
+              <ListItemText primary="Annonces" />
+            </ListItemButton>
+          </ListItem>
         </List>
 
         <List>
-          {["Candidats"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 1 === 0 ? <PersonSearchIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem key="Candidats" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PersonSearchIcon />
+              </ListItemIcon>
+              <ListItemText primary="Candidats" />
+            </ListItemButton>
+          </ListItem>
         </List>
 
         <List>
-          {["Statistiques"].map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key="Statistiques" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 1 === 0 ? <QueryStatsIcon /> : <MailIcon />}
+                  <QueryStatsIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary="Statistiques" />
               </ListItemButton>
             </ListItem>
-          ))}
         </List>
 
         <List>
-          {["Magasins"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 1 === 0 ? <StoreIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem key="Magasins" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <StoreIcon />
+              </ListItemIcon>
+              <ListItemText primary="Magasins" />
+            </ListItemButton>
+          </ListItem>
         </List>
 
         <List>
-          {["Messages"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 1 === 0 ? <MailIcon /> : <InboxIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem key="Messages" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Messages" />
+            </ListItemButton>
+          </ListItem>
         </List>
 
         <Divider />
