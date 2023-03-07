@@ -1,4 +1,4 @@
-import JobListing from '../components/JobListing';
+import JobListing from '../components/navigation//JobListing';
 
 function JobsPage() {
   return <JobListing />;

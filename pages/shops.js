@@ -1,4 +1,4 @@
-import ShopsListing from '../components/ShopsListing';
+import ShopsListing from '../components/navigation/ShopsListing';
 
 function ShopsPage() {
   return <ShopsListing />;

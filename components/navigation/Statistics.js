@@ -1,4 +1,5 @@
 import styles from '../../styles/Statistics.module.css';
+import Link from 'next/link';
 
 function Statistics() {
 

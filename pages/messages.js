@@ -1,4 +1,4 @@
-import MessagesListing from '../components/MessagesListing';
+import MessagesListing from '../components/navigation/MessagesListing';
 
 function MessagesPage() {
   return <MessagesListing />;

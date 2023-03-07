@@ -1,4 +1,4 @@
-import Parameters from '../components/Parameters';
+import Parameters from '../components/navigation/Parameters';
 
 function ParametersPage() {
   return <Parameters />;

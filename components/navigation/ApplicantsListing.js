@@ -1,4 +1,5 @@
 import styles from '../../styles/ApplicantsListing.module.css';
+import Link from 'next/link';
 
 function ApplicantsListing() {
 

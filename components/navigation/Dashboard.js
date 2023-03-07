@@ -2,36 +2,13 @@ import styles from '../../styles/Dashboard.module.css';
 
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
+import { useState } from 'react';
 
-import MuiDrawer from '@mui/material/Drawer';
-import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import Link from 'next/link';
+
+import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 
 
-import MailIcon from "@mui/icons-material/Mail";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonSearchIcon from "@mui/icons-material/PersonSearch";
-import CreateIcon from "@mui/icons-material/Create";
-import QueryStatsIcon from "@mui/icons-material/QueryStats";
-import MenuIcon from "@mui/icons-material/Menu";
-import StoreIcon from "@mui/icons-material/Store";
-
-
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -111,7 +88,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 function Dashboard() {
 
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -155,69 +132,81 @@ function Dashboard() {
         <Divider />
        
         <List>
-          <ListItem key="Dashboard" disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <DashboardIcon />
-              </ListItemIcon>
-              <ListItemText primary="Dashboard" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-
-        <List>
-          <ListItem key="Annonces" disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <CreateIcon />
-              </ListItemIcon>
-              <ListItemText primary="Annonces" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-
-        <List>
-          <ListItem key="Candidats" disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <PersonSearchIcon />
-              </ListItemIcon>
-              <ListItemText primary="Candidats" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-
-        <List>
-            <ListItem key="Statistiques" disablePadding>
+          <Link href="/dashboard">
+            <ListItem key="Dashboard" disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <QueryStatsIcon />
+                  <DashboardIcon />
                 </ListItemIcon>
-                <ListItemText primary="Statistiques" />
+                <ListItemText primary="Dashboard" />
               </ListItemButton>
             </ListItem>
+          </Link>
         </List>
 
         <List>
-          <ListItem key="Magasins" disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <StoreIcon />
-              </ListItemIcon>
-              <ListItemText primary="Magasins" />
-            </ListItemButton>
-          </ListItem>
+          <Link href="/jobs">
+            <ListItem key="Annonces" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <CreateIcon />
+                </ListItemIcon>
+                <ListItemText primary="Annonces" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         </List>
 
         <List>
-          <ListItem key="Messages" disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary="Messages" />
-            </ListItemButton>
-          </ListItem>
+          <Link href="/applicants">
+            <ListItem key="Candidats" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <PersonSearchIcon />
+                </ListItemIcon>
+                <ListItemText primary="Candidats" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+        </List>
+
+        <List>
+          <Link href="/statistics">
+              <ListItem key="Statistiques" disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <QueryStatsIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Statistiques" />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+        </List>
+
+        <List>
+          <Link href="/shops">
+            <ListItem key="Magasins" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <StoreIcon />
+                </ListItemIcon>
+                <ListItemText primary="Magasins" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+        </List>
+
+        <List>
+          <Link href="/messages">
+            <ListItem key="Messages" disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary="Messages" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         </List>
 
       </Drawer>

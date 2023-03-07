@@ -1,4 +1,5 @@
 import styles from '../../styles/JobListing.module.css';
+import Link from 'next/link';
 
 function JobListing() {
 

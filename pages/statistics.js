@@ -1,4 +1,4 @@
-import Statistics from '../components/Statistics';
+import Statistics from '../components/navigation/Statistics';
 
 function StatisticsPage() {
   return <Statistics />;

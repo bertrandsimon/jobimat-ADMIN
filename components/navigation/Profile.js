@@ -1,4 +1,5 @@
 import styles from '../../styles/Profile.module.css';
+import Link from 'next/link';
 
 function Profile() {
 

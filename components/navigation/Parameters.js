@@ -1,4 +1,5 @@
 import styles from '../../styles/Parameters.module.css';
+import Link from 'next/link';
 
 function Parameters() {
 
