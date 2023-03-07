@@ -2,7 +2,7 @@ import styles from '../../styles/Dashboard.module.css';
 
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -27,6 +27,20 @@ import CreateIcon from "@mui/icons-material/Create";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import MenuIcon from "@mui/icons-material/Menu";
 import StoreIcon from "@mui/icons-material/Store";
+
+
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Unstable_Grid2';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -109,8 +123,9 @@ function Dashboard() {
 
 
  return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
       <CssBaseline />
+
       <AppBar position="fixed" open={open}>
         <Toolbar>
           <IconButton
@@ -130,6 +145,7 @@ function Dashboard() {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
@@ -205,36 +221,60 @@ function Dashboard() {
         </List>
 
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-          imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-          Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-          Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-          nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-          leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-          feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-          consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-          sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-          eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-          neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-          tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-          sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-          tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-          gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-          et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-          tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+
+      
+      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0' }}>
+
+        <Grid container spacing={4}>
+
+        <Grid xs={3}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>Content goes here</div>
+            </Paper>
+          </Grid>
+
+          <Grid xs={3}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>Content goes here</div>
+            </Paper>
+          </Grid>
+
+          <Grid xs={3}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>Content goes here</div>
+            </Paper>
+          </Grid>
+
+          <Grid xs={3}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>Content goes here</div>
+            </Paper>
+          </Grid>
+
+          <Grid xs={6}>
+
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
+                <div>Content goes here</div>
+            </Paper>
+
+          </Grid>
+
+          <Grid xs={6}>
+
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
+                <div>Content goes here</div>
+            </Paper>
+
+          </Grid>
+
+          
+        
+
+        </Grid>
+
       </Box>
+
+
     </Box>
   );
 }
