@@ -41,10 +41,10 @@ const ChartJobsByType = () => {
     breakpoint: 480,
     options: {
       chart: {
-        width: 200
+        width: '100%',
       },
       legend: {
-        position: 'bottom'
+        position: 'top'
       }
     }
   }]
@@ -52,15 +52,15 @@ const ChartJobsByType = () => {
   
 
   return (
-    <div id="chart">
+    <div>
     <h3>ANNONCES PAR TYPES</h3>
     <div>
     <Chart
         options={options}
         series={options.series}
         type="polarArea"
-        width="400"
-        height="400"
+        width="100%"
+        height="300%"
       />
     </div>
   </div>

@@ -56,7 +56,7 @@ const ChartJobsByBranch = () => {
   };
  
     return (
-        <div className="title">
+        <div>
         <h3 >TOP MAGASINS</h3>
         <div>
         <Chart
