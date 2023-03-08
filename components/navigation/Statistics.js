@@ -224,32 +224,32 @@ function Statistics() {
 
       <Grid xs={3}>
           <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Jobs listing page</div>
+                <div>Statistics page</div>
           </Paper>
         </Grid>
 
         <Grid xs={3}>
           <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Jobs listing page</div>
+                <div>Statistics page</div>
           </Paper>
         </Grid>
 
         <Grid xs={3}>
           <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Jobs listing page</div>
+                <div>Statistics page</div>
           </Paper>
         </Grid>
 
         <Grid xs={3}>
           <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Jobs listing page</div>
+                <div>Statistics page</div>
           </Paper>
         </Grid>
 
         <Grid xs={6}>
 
           <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-              <div>Jobs listing page</div>
+              <div>Statistics page</div>
           </Paper>
 
         </Grid>
@@ -257,7 +257,7 @@ function Statistics() {
         <Grid xs={6}>
 
           <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-              <div>Jobs listing page</div>
+              <div>Statistics page</div>
           </Paper>
 
         </Grid>

@@ -226,25 +226,49 @@ function ShopsListing() {
 
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                 
+            <div className={styles.miniCard}>
+                <div className={styles.title}>Nombre de Magasins</div>
+                <div className={styles.numberWrapper}>
+                  <div className={styles.number}>196</div>
+                  <div className={styles.subTxt}>Magasin</div>  
+                </div>
+            </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div><Image src="/images/chart.jpg" width={500} height={400} /></div>
+             <div className={styles.miniCard}>
+                <div className={styles.title}>Metric 2</div>
+                <div className={styles.numberWrapper}>
+                  <div className={styles.number}>XXXX</div>
+                  <div className={styles.subTxt}>Items</div>  
+                </div>
+              </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-              <div><Image src="/images/chart.jpg" width={500} height={400} /></div>
+            <div className={styles.miniCard}>
+                <div className={styles.title}>Metric 3</div>
+                <div className={styles.numberWrapper}>
+                  <div className={styles.number}>XXXXXX</div>
+                  <div className={styles.subTxt}>Items</div>  
+                </div>
+            </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-              <div><Image src="/images/chart.jpg" width={500} height={400} /></div>
+            <div className={styles.miniCard}>
+                <div className={styles.title}>Metric 4</div>
+                <div className={styles.numberWrapper}>
+                  <div className={styles.number}>XXXXX</div>
+                  <div className={styles.subTxt}>Items</div>  
+                </div>
+            </div>
             </Paper>
           </Grid>
 
