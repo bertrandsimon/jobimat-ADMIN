@@ -7,7 +7,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
-
+import Charts from '../charts/Charts';
+import ChartJobsByType from '../charts/ChartJobsByType';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -247,18 +248,18 @@ function Dashboard() {
             </Paper>
           </Grid>
 
-          <Grid xs={6}>
+          <Grid xs={8}>
 
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Content goes here</div>
+            <Paper elevation={3} sx={{ padding: 3, Height: '500px' }}>
+            <Charts/>
             </Paper>
 
           </Grid>
 
-          <Grid xs={6}>
+          <Grid xs={4}>
 
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Content goes here</div>
+            <Paper elevation={4} sx={{ padding: 3, Height: '500px' }}>
+                <ChartJobsByType/>
             </Paper>
 
           </Grid>

@@ -99,15 +99,15 @@ const Charts = () => {
     },
   };
   return (
-    <div id="chart">
+    <div>
       <h3>OFFRES GEDIMAT</h3>
       <div>
         <Chart
           options={options}
           series={series}
           type="line"
-          width="800"
-          height="400"
+          // width="100%"
+          height="200%"
         />
       </div>
     </div>
