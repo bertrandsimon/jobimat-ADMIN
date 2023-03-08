@@ -3,6 +3,6 @@
  
 }
 .tableHead > tr > th {
-  background-color: black;
+  background: linear-gradient(90deg, #A10410 6.25%, #C60501 100%);
   color: white;
 }

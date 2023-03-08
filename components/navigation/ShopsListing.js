@@ -1,5 +1,7 @@
 import styles from '../../styles/ShopsListing.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
@@ -230,19 +232,19 @@ function ShopsListing() {
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing Metric 2</div>
+                <div><Image src="/images/chart.jpg" width={500} height={400} /></div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing Metric 3</div>
+              <div><Image src="/images/chart.jpg" width={500} height={400} /></div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing Metric 4</div>
+              <div><Image src="/images/chart.jpg" width={500} height={400} /></div>
             </Paper>
           </Grid>
 
@@ -255,6 +257,9 @@ function ShopsListing() {
             </Paper>
 
           </Grid>
+
+        
+          
 
        
 

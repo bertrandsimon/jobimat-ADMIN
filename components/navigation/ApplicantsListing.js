@@ -1,9 +1,8 @@
 import styles from '../../styles/ApplicantsListing.module.css';
+import Link from 'next/link';
 
 import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
-
-import Link from 'next/link';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 

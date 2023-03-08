@@ -15,11 +15,11 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Gedimat Laval', 159, 6.0, 24, 4.0),
+  createData('Gedibois Laval', 237, 9.0, 37, 4.3),
+  createData('Concept Store Laval', 262, 16.0, 24, 6.0),
+  createData('Gedimat Laval', 305, 3.7, 67, 4.3),
+  createData('Gedimat Laval', 356, 16.0, 49, 3.9),
 ];
 
 
@@ -32,11 +32,11 @@ function ShopsTable() {
     <Table sx={{ minWidth: 650 }} aria-label="simple table">
       <TableHead className={styles.tableHead}>
         <TableRow>
-          <TableCell>Dessert (100g serving)</TableCell>
-          <TableCell align="right">Calories</TableCell>
-          <TableCell align="right">Fat&nbsp;(g)</TableCell>
-          <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-          <TableCell align="right">Protein&nbsp;(g)</TableCell>
+          <TableCell>Nom du magasin</TableCell>
+          <TableCell align="right">Data 1</TableCell>
+          <TableCell align="right">Data 2</TableCell>
+          <TableCell align="right">Data 3</TableCell>
+          <TableCell align="right">Data 4</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
