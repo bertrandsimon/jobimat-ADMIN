@@ -1,6 +1,6 @@
 import styles from '../../styles/ApplicantsListing.module.css';
 import Link from 'next/link';
-
+import Image from 'next/image';
 import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
@@ -224,25 +224,49 @@ function ApplicantsListing() {
 
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Applicants listing page</div>
+                  <div className={styles.miniCard}>
+
+                    <div className={styles.title}>Nombre de Candidats</div>
+                    <div className={styles.numberWrapper}>
+                      <div className={styles.number}>8500</div>
+                      <div className={styles.subTxt}>Candidats</div>  
+                    </div>
+
+                  </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Applicants listing page</div>
+              <div className={styles.miniCard}>
+
+                <div className={styles.title}>Metric 2</div>
+                <div className={styles.numberWrapper}>
+                  <div className={styles.number}>3500</div>
+                  <div className={styles.subTxt}>Candidats</div>  
+                </div>
+
+              </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Applicants listing page</div>
+            <div className={styles.miniCard}>
+
+              <div className={styles.title}>Metric 3</div>
+              <div className={styles.numberWrapper}>
+                <div className={styles.number}>1500</div>
+                <div className={styles.subTxt}>Candidats</div>  
+              </div>
+
+            </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Applicants listing page</div>
+            <Image src="/images/chart.jpg" width={500} height={400} />
             </Paper>
           </Grid>
 

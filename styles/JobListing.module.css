@@ -2,3 +2,25 @@
   display: flex;
  
 }
+
+.miniCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  gap: 10px;
+}
+
+.title {font-size: 14px; color: black;}
+
+.numberWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.number {font-size: 34px;}
+.subTxt {font-size: 14px; color: black; padding-left: 20px;}

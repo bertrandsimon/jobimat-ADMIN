@@ -1,4 +1,4 @@
-import styles from '../../styles/ApplicantsTable.module.css';
+import styles from '../../styles/JobsTable.module.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -16,30 +16,29 @@ import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 
 
-
 function ApplicantsTable() {
 
-  const [applicantsData, setApplicantsData] = useState([])
+  const [jobsData, setJobsData] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/admin/applicants')
+    fetch('http://localhost:3000/jobs/')
       .then(response => response.json())
       .then(data => {
-        console.log(data.allApplicants)
-        setApplicantsData(data.allApplicants)
+        
+        setJobsData(data.allOffers)
       });
   }, []);
 
-  const applicantRow = applicantsData.map((data, i) => {
+  const jobRow = jobsData.map((data, i) => {
     return <TableRow
             key={i}
             sx={{ '&:last-child td, &:last-child th': { border: 0 }  }}
           >
-            <TableCell align="center" sx={{ width: 50, fontWeight: 'bold' }}><Avatar alt="Remy Sharp" src="/images/1.jpg" /></TableCell>
-            <TableCell align="left" sx={{ width: 100 }}>{data.name.charAt(0).toUpperCase() + data.name.slice(1)} </TableCell>
-            <TableCell align="left" sx={{ width: 100 }}>{data.surname} </TableCell>
-            <TableCell align="center" sx={{ width: 100 }}><div className={styles.eval}><Image src="/images/eval.png" width={68} height={37} /></div></TableCell>
-            <TableCell align="center" sx={{ width: 100 }}> {Math.floor(Math.random() * 26)} </TableCell>
+            
+            <TableCell align="left" sx={{ width: 100 }}>{data.title} </TableCell>
+            <TableCell align="left" sx={{ width: 100 }}>{data.title} </TableCell>
+            <TableCell align="center" sx={{ width: 100 }}>{data.title} </TableCell>
+            <TableCell align="center" sx={{ width: 100 }}> {data.title}  </TableCell>
             <TableCell align="center" sx={{ width: 500 }}>actions </TableCell>
           </TableRow>
   });
@@ -52,16 +51,16 @@ function ApplicantsTable() {
       <TableHead className={styles.tableHead}>
         <TableRow>
         
-          <TableCell align="center" sx={{ width: 50}}>Avatar</TableCell>
-          <TableCell align="left" sx={{ width: 100 }}>Nom</TableCell>
-          <TableCell align="left" sx={{ width: 100 }}>Prénom</TableCell>
-          <TableCell align="center" sx={{ width: 100 }}>Evaluation</TableCell>
-          <TableCell align="center" sx={{ width: 100 }}>Nb offres postulés</TableCell>
+          
+          <TableCell align="left" sx={{ width: 100 }}>title</TableCell>
+          <TableCell align="left" sx={{ width: 100 }}>title</TableCell>
+          <TableCell align="center" sx={{ width: 100 }}>title</TableCell>
+          <TableCell align="center" sx={{ width: 100 }}>title</TableCell>
           <TableCell align="center" sx={{ width: 500 }}>Actions</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {applicantRow}
+        {jobRow}
       </TableBody>
     </Table>
   </TableContainer>

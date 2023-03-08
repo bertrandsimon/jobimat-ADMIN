@@ -1,12 +1,13 @@
 import styles from '../../styles/JobListing.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 
-
+import JobsTable from '../tables/JobsTable';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -224,46 +225,60 @@ function JobListing() {
 
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Jobs listing page</div>
+
+              <div className={styles.miniCard}>
+                <div className={styles.title}>Nombre de Candidats</div>
+                <div className={styles.numberWrapper}>
+                  <div className={styles.number}>8500</div>
+                  <div className={styles.subTxt}>Candidats</div>  
+                </div>
+               </div>
+
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Jobs listing page</div>
+              <div className={styles.miniCard}>
+                  <div className={styles.title}>Nombre de Candidats</div>
+                  <div className={styles.numberWrapper}>
+                    <div className={styles.number}>8500</div>
+                    <div className={styles.subTxt}>Candidats</div>  
+                  </div>
+               </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Jobs listing page</div>
+            <div className={styles.miniCard}>
+                  <div className={styles.title}>Nombre de Candidats</div>
+                  <div className={styles.numberWrapper}>
+                    <div className={styles.number}>8500</div>
+                    <div className={styles.subTxt}>Candidats</div>  
+                  </div>
+               </div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Jobs listing page</div>
+              <Image src="/images/chart.jpg" width={500} height={400} />
             </Paper>
           </Grid>
 
-          <Grid xs={6}>
+          <Grid xs={12}>
 
             <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Jobs listing page</div>
+                
+              <JobsTable/>
+
             </Paper>
 
           </Grid>
 
-          <Grid xs={6}>
+         
 
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Jobs listing page</div>
-            </Paper>
-
-          </Grid>
-
-          
-        
 
         </Grid>
 
