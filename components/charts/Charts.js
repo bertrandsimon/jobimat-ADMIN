@@ -1,9 +1,9 @@
 import React from "react";
 // import "./App.css";
 import { useState, useEffect } from "react";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false }); 
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const Charts = () => {
   const [offersGlobal, setOffersGlobal] = useState([]);
@@ -11,20 +11,18 @@ const Charts = () => {
   const [offersApplied, setOffersApplied] = useState([]);
   const [date, setDate] = useState([]);
 
- 
-
   useEffect(() => {
     const getData = async () => {
-      const url = "http://localhost:3000/stats/job/stat";
+      const url = "http://localhost:3000/stats/perYears";
       try {
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
-        
-        setOffersGlobal(Object.values(data.allOffersByYear.all));
-        setOffersTop(Object.values(data.allOffersByYear.top));
-        setOffersApplied(Object.values(data.allOffersByYear.applied));
-        setDate(Object.keys(data.allOffersByYear.all));
+
+        setOffersGlobal(Object.values(data.sortedJobs.all));
+        setOffersTop(Object.values(data.sortedJobs.top));
+        setOffersApplied(Object.values(data.sortedJobs.filled));
+        setDate(Object.keys(data.sortedJobs.all));
       } catch (error) {
         console.log(error);
       }
@@ -83,8 +81,9 @@ const Charts = () => {
     },
     legend: {
       position: "top",
-      offsetY: 10,
-      offsetX: -300,
+      horizontalAlign: "center",
+      // offsetY: 10,
+      // offsetX: -300,
     },
     yaxis: {
       title: {
@@ -95,19 +94,27 @@ const Charts = () => {
     xaxis: {
       // type: 'datetime',
       title: "Années",
-      categories:date,
+      categories: date,
     },
   };
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        height: "100%",
+      }}
+    >
       <h3>OFFRES GEDIMAT</h3>
-      <div>
+      <div style={{ width: "100%", height: "100%" }}>
         <Chart
           options={options}
           series={series}
           type="line"
           // width="100%"
-          height="200%"
+          height="100%"
         />
       </div>
     </div>

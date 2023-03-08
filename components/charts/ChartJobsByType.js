@@ -1,9 +1,9 @@
 import React from "react";
 // import "./App.css";
 import { useState, useEffect } from "react";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false }); 
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const ChartJobsByType = () => {
   const [jobsByTypes, setJobsByTypes] = useState([]);
@@ -24,46 +24,54 @@ const ChartJobsByType = () => {
     getData();
   }, []);
 
-  const options = 
-  {
-    series:jobsByTypes,
-    labels:type,
+  const options = {
+    series: jobsByTypes,
+    labels: type,
+    legend: { position: "bottom" },
     chart: {
-    type: 'polarArea',
-  },
-  stroke: {
-    colors: ['#fff']
-  },
-  fill: {
-    opacity: 0.8
-  },
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        width: '100%',
+      type: "polarArea",
+    },
+    stroke: {
+      colors: ["#fff"],
+    },
+    fill: {
+      opacity: 0.8,
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: "100%",
+          },
+          legend: {
+            position: "top",
+          },
+        },
       },
-      legend: {
-        position: 'top'
-      }
-    }
-  }]
-  }; 
-  
+    ],
+  };
 
   return (
-    <div>
-    <h3>ANNONCES PAR TYPES</h3>
-    <div>
-    <Chart
-        options={options}
-        series={options.series}
-        type="polarArea"
-        width="100%"
-        height="300%"
-      />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
+      <h3>ANNONCES PAR TYPES</h3>
+      <div>
+        <Chart
+          options={options}
+          series={options.series}
+          type="polarArea"
+          width={300}
+          height={300}
+        />
+      </div>
     </div>
-  </div>
   );
 };
 
