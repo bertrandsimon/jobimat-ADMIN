@@ -1,15 +1,13 @@
 import React from "react";
 // import "./App.css";
 import { useState, useEffect } from "react";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false }); 
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const ChartJobsByBranch = () => {
   const [jobsByBranch, setJobsByBranch] = useState([]);
   const [branch, setBranch] = useState([]);
-
-
 
   useEffect(() => {
     const getData = async () => {
@@ -34,10 +32,10 @@ const ChartJobsByBranch = () => {
       type: "bar",
       data: jobsByBranch,
     },
-  ]
+  ];
   const options = {
     chart: {
-      type: 'bar',
+      type: "bar",
       // height: 200,
       // width: 200,
     },
@@ -45,31 +43,49 @@ const ChartJobsByBranch = () => {
       bar: {
         borderRadius: 4,
         horizontal: true,
-      }
+      },
     },
     dataLabels: {
-      enabled: false
+      enabled: false,
+      style: {
+        fontSize: "9px",
+        colors: ["#fff"],
+      },
     },
+
     xaxis: {
-      categories:branch,
-    }
+      categories: branch,
+      dataLabels: {
+        style: {
+          fontSize: 4,
+        },
+      },
+    },
   };
- 
-    return (
-        <div>
-        <h3 >TOP MAGASINS</h3>
-        <div>
+
+  return (
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        width: "100%",
+      }}
+    >
+      <h3>TOP FRANCHISES</h3>
+      <div style={{ height: "95%", width: "100%" }}>
         <Chart
           options={options}
           series={series}
           type="bar"
-          height={500}
-          width={500}
+          height="100%"
+          // width="100%"
         />
       </div>
-      </div>
-    );
-  }
-
+    </div>
+  );
+};
 
 export default ChartJobsByBranch;
