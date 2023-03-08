@@ -1487,7 +1487,17 @@ apexcharts@^3.37.1:
   version "3.37.1"
   resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.37.1.tgz#50443d302fc7fc72aace9c6c4074baae017c6950"
   integrity sha512-fmQ5Updeb/LASl+S1+mIxXUFxzY0Fa7gexfCs4o+OPP9f2NEBNjvybOtPrah44N4roK7U5o5Jis906QeEQu0cA==
+apexcharts@^3.37.1:
+  version "3.37.1"
+  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.37.1.tgz#50443d302fc7fc72aace9c6c4074baae017c6950"
+  integrity sha512-fmQ5Updeb/LASl+S1+mIxXUFxzY0Fa7gexfCs4o+OPP9f2NEBNjvybOtPrah44N4roK7U5o5Jis906QeEQu0cA==
   dependencies:
+    svg.draggable.js "^2.2.2"
+    svg.easing.js "^2.0.0"
+    svg.filter.js "^2.0.2"
+    svg.pathmorphing.js "^0.1.3"
+    svg.resize.js "^1.4.3"
+    svg.select.js "^3.0.1"
     svg.draggable.js "^2.2.2"
     svg.easing.js "^2.0.0"
     svg.filter.js "^2.0.2"
@@ -1499,9 +1509,20 @@ argparse@^1.0.7:
   version "1.0.10"
   resolved "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz"
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
+argparse@^1.0.7:
+  version "1.0.10"
+  resolved "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz"
+  integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   dependencies:
     sprintf-js "~1.0.2"
+    sprintf-js "~1.0.2"
 
+aria-query@^5.0.0:
+  version "5.1.3"
+  resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.1.3.tgz"
+  integrity sha512-R5iJ5lkuHybztUfuOAznmboyjWq8O6sqNqtK7CLOqdydi54VNbORp49mb14KbWgG1QD3JFO9hJdZ+y4KutfdOQ==
+  dependencies:
+    deep-equal "^2.0.5"
 aria-query@^5.0.0:
   version "5.1.3"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.1.3.tgz"
@@ -1513,7 +1534,15 @@ array-tree-filter@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/array-tree-filter/-/array-tree-filter-2.1.0.tgz"
   integrity sha512-4ROwICNlNw/Hqa9v+rk5h22KjmzB1JGTMVKP2AKJBOCgb0yL0ASf0+YvCcLNNwquOHNX48jkeZIJ3a+oOQqKcw==
+array-tree-filter@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/array-tree-filter/-/array-tree-filter-2.1.0.tgz"
+  integrity sha512-4ROwICNlNw/Hqa9v+rk5h22KjmzB1JGTMVKP2AKJBOCgb0yL0ASf0+YvCcLNNwquOHNX48jkeZIJ3a+oOQqKcw==
 
+async-validator@^4.1.0:
+  version "4.2.5"
+  resolved "https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz"
+  integrity sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==
 async-validator@^4.1.0:
   version "4.2.5"
   resolved "https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz"
@@ -1523,7 +1552,20 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
+asynckit@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
+  integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
+available-typed-arrays@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz"
+  integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
+
+babel-jest@^28.1.3:
+  version "28.1.3"
+  resolved "https://registry.npmjs.org/babel-jest/-/babel-jest-28.1.3.tgz"
+  integrity sha512-epUaPOEWMk3cWX0M/sPvCHHCe9fMFAa/9hXEgKP8nFfNl/jlGkE9ucq9NqkZGXLDduCJYS0UvSlPUwC0S+rH6Q==
 available-typed-arrays@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz"
@@ -4291,6 +4333,12 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+svg.draggable.js@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/svg.draggable.js/-/svg.draggable.js-2.2.2.tgz#c514a2f1405efb6f0263e7958f5b68fce50603ba"
+  integrity sha512-JzNHBc2fLQMzYCZ90KZHN2ohXL0BQJGQimK1kGk6AvSeibuKcIdDX9Kr0dT9+UJ5O8nYA0RB839Lhvk4CY4MZw==
+  dependencies:
+    svg.js "^2.0.1"
 svg.draggable.js@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/svg.draggable.js/-/svg.draggable.js-2.2.2.tgz#c514a2f1405efb6f0263e7958f5b68fce50603ba"

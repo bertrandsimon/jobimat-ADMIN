@@ -1,9 +1,12 @@
 // STATES IMPORT
 import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
+import { styled } from "@mui/material/styles";
 import { styled } from "@mui/material/styles";
 
 // IMAGE IMPORT
+import Image from "next/image";
 import Image from "next/image";
 
 // FONT AWESOME IMPORT EXAMPLE
@@ -13,12 +16,22 @@ import {
   faEye,
   faEyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBookmark,
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
 
+import { hideArticle } from "../reducers/hiddenArticles";
 import { hideArticle } from "../reducers/hiddenArticles";
 
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
+import styles from "../styles/Home.module.css";
 import styles from "../styles/Home.module.css";
 
 // MUI imports
@@ -57,14 +70,18 @@ import CollapsibleTable from "./Applicant";
 
 const drawerWidth = 240;
 const pages = [""];
+const pages = [""];
 //const pages = ['Profil', 'Paramètres', 'Deconnexion'];
 
+const settings = ["Profil recruteur", "Paramètres", "Déconnexion"];
 const settings = ["Profil recruteur", "Paramètres", "Déconnexion"];
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
+  textAlign: "center",
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
@@ -96,7 +113,32 @@ function Home() {
 
   return (
     <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
+      <AppBar
+        position="fixed"
+        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              GEDIMAT ADMIN
+            </Typography>
       <AppBar
         position="fixed"
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
@@ -231,7 +273,9 @@ function Home() {
           width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
+          "& .MuiDrawer-paper": {
             width: drawerWidth,
+            boxSizing: "border-box",
             boxSizing: "border-box",
           },
         }}
@@ -316,6 +360,7 @@ function Home() {
       <Box
         component="main"
         sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
+        sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
       >
         <Toolbar />
 
@@ -341,6 +386,7 @@ function Home() {
         </Box>
         {/* END OF ROW1 */}
 
+        {/* ROW 2
         {/* ROW 2
     <Box sx={{ flexGrow: 1,  marginTop: 5 }}>
       <Grid container spacing={1}>
