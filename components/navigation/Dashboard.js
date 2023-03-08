@@ -50,6 +50,10 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
+const CustomDrawerHeader = styled(DrawerHeader)(({ theme }) => ({
+  backgroundColor: 'linear-gradient(90deg, #A10410 6.25%, #C60501 100%)',
+}));
+
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
@@ -58,6 +62,7 @@ const AppBar = styled(MuiAppBar, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
+  background: 'linear-gradient(90deg, #A10410 6.25%, #C60501 100%)', 
   ...(open && {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
@@ -74,6 +79,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     flexShrink: 0,
     whiteSpace: 'nowrap',
     boxSizing: 'border-box',
+    background: 'linear-gradient(90deg, #A10410 6.25%, #C60501 100%)',
+    boxShadow: 'none',
     ...(open && {
       ...openedMixin(theme),
       '& .MuiDrawer-paper': openedMixin(theme),
@@ -103,7 +110,7 @@ function Dashboard() {
     <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
       <CssBaseline />
 
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} elevation={0}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -115,7 +122,7 @@ function Dashboard() {
               ...(open && { display: 'none' }),
             }}
           >
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Jobimat
@@ -124,12 +131,12 @@ function Dashboard() {
       </AppBar>
 
       <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
+        <DrawerHeader style={{ background: 'linear-gradient(90deg, #A10410 6.25%, #C60501 100%)' }}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+        
        
         <List>
           <Link href="/dashboard">
