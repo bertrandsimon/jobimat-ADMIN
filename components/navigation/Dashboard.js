@@ -130,14 +130,8 @@ function Dashboard() {
     setOpen(false);
   };
 
-<<<<<<< HEAD
-
- return (
-    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
-=======
   return (
-    <Box sx={{ display: "flex", backgroundColor: "#E7EBF0", height: "100vh" }}>
->>>>>>> emmaAdmin-1
+    <Box sx={{ display: "flex", backgroundColor: "#E7EBF0", height: "100%" }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>
