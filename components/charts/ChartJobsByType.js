@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
-
+import dynamic from 'next/dynamic';
 const ChartJobsByType = () => {
   const [jobsByTypes, setJobsByTypes] = useState([]);
   const [type, setType] = useState([]);

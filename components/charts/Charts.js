@@ -1,13 +1,19 @@
 import React from "react";
-import "./App.css";
+// import "./App.css";
 import { useState, useEffect } from "react";
-import Chart from "react-apexcharts";
+
+// import dynamic from 'next/dynamic'
+// const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
+
+// import Chart from "react-apexcharts";
 
 const Charts = () => {
   const [offersGlobal, setOffersGlobal] = useState([]);
   const [offersTop, setOffersTop] = useState([]);
   const [offersApplied, setOffersApplied] = useState([]);
   const [date, setDate] = useState([]);
+
+ 
 
   useEffect(() => {
     const getData = async () => {

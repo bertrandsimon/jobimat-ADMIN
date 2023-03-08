@@ -226,7 +226,7 @@ function ShopsListing() {
 
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <CircleNivoChart/>
+                 
             </Paper>
           </Grid>
 
@@ -251,7 +251,7 @@ function ShopsListing() {
           <Grid xs={12}>
 
             <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-
+           
                 <ShopsTable/>
 
             </Paper>

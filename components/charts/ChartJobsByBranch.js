@@ -2,10 +2,12 @@ import React from "react";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
-
+// import dynamic from 'next/dynamic';
 const ChartJobsByBranch = () => {
   const [jobsByBranch, setJobsByBranch] = useState([]);
   const [branch, setBranch] = useState([]);
+
+
 
   useEffect(() => {
     const getData = async () => {
