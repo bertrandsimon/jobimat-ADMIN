@@ -1,5 +1,6 @@
 import styles from '../../styles/ShopsTable.module.css';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 
 import Table from '@mui/material/Table';

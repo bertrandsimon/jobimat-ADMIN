@@ -5,7 +5,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
-
+import ApplicantsTable from '../tables/ApplicantsTable';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -246,24 +246,16 @@ function ApplicantsListing() {
             </Paper>
           </Grid>
 
-          <Grid xs={6}>
+          <Grid xs={12}>
 
             <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Applicants listing page</div>
+                <ApplicantsTable/>
             </Paper>
 
           </Grid>
 
-          <Grid xs={6}>
-
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Applicants listing page</div>
-            </Paper>
-
-          </Grid>
-
-          
         
+
 
         </Grid>
 
