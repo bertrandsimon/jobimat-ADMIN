@@ -1,11 +1,9 @@
 import React from "react";
 // import "./App.css";
 import { useState, useEffect } from "react";
+import dynamic from 'next/dynamic'
 
-// import dynamic from 'next/dynamic'
-// const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-
-// import Chart from "react-apexcharts";
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false }); 
 
 const Charts = () => {
   const [offersGlobal, setOffersGlobal] = useState([]);
