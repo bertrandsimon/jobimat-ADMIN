@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
-
+import ShopsTable from '../tables/ShopsTable';
+import CircleNivoChart from '../charts/CircleNivoChart';
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 
 
@@ -223,43 +224,39 @@ function ShopsListing() {
 
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing</div>
+                  <CircleNivoChart/>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing</div>
+                  <div>Shops Listing Metric 2</div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing</div>
+                  <div>Shops Listing Metric 3</div>
             </Paper>
           </Grid>
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>Shops Listing</div>
+                  <div>Shops Listing Metric 4</div>
             </Paper>
           </Grid>
 
-          <Grid xs={6}>
+          <Grid xs={12}>
 
             <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Shops Listing</div>
+
+                <ShopsTable/>
+
             </Paper>
 
           </Grid>
 
-          <Grid xs={6}>
-
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                <div>Shops Listing</div>
-            </Paper>
-
-          </Grid>
+       
 
           
         
