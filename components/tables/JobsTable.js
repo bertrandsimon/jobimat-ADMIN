@@ -40,6 +40,7 @@ function ApplicantsTable() {
             <TableCell align="center" sx={{ width: 100 }}>{data.title} </TableCell>
             <TableCell align="center" sx={{ width: 100 }}> {data.title}  </TableCell>
             <TableCell align="center" sx={{ width: 500 }}>actions </TableCell>
+            
           </TableRow>
   });
 
