@@ -105,7 +105,7 @@ function MessagesListing() {
 
   return (
 
-    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
+    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>

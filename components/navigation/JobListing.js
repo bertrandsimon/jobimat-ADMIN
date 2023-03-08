@@ -107,7 +107,7 @@ function JobListing() {
 
   return (
 
-   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
+   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>
@@ -230,7 +230,7 @@ function JobListing() {
                 <div className={styles.title}>Nombre de Candidats</div>
                 <div className={styles.numberWrapper}>
                   <div className={styles.number}>8500</div>
-                  <div className={styles.subTxt}>Candidats</div>  
+                  <div className={styles.subTxt}>Annonces</div>  
                 </div>
                </div>
 
@@ -240,10 +240,10 @@ function JobListing() {
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
               <div className={styles.miniCard}>
-                  <div className={styles.title}>Nombre de Candidats</div>
+                  <div className={styles.title}>Metric 3</div>
                   <div className={styles.numberWrapper}>
-                    <div className={styles.number}>8500</div>
-                    <div className={styles.subTxt}>Candidats</div>  
+                    <div className={styles.number}>XXXX</div>
+                    <div className={styles.subTxt}>Items</div>  
                   </div>
                </div>
             </Paper>
@@ -252,10 +252,10 @@ function JobListing() {
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
             <div className={styles.miniCard}>
-                  <div className={styles.title}>Nombre de Candidats</div>
+                  <div className={styles.title}>Metric 3</div>
                   <div className={styles.numberWrapper}>
-                    <div className={styles.number}>8500</div>
-                    <div className={styles.subTxt}>Candidats</div>  
+                    <div className={styles.number}>XXXX</div>
+                    <div className={styles.subTxt}>Items</div>  
                   </div>
                </div>
             </Paper>

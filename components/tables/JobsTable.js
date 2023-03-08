@@ -36,11 +36,11 @@ function ApplicantsTable() {
           >
             
             <TableCell align="left" sx={{ width: 100 }}>{data.title} </TableCell>
-            <TableCell align="left" sx={{ width: 100 }}>{data.title} </TableCell>
-            <TableCell align="center" sx={{ width: 100 }}>{data.title} </TableCell>
-            <TableCell align="center" sx={{ width: 100 }}> {data.title}  </TableCell>
+            <TableCell align="left" sx={{ width: 100 }}>{data.store.storeName} </TableCell>
+            <TableCell align="center" sx={{ width: 100 }}>{data.store.postalCode} </TableCell>
+            <TableCell align="center" sx={{ width: 100 }}> {data.contract.type}  </TableCell>
             <TableCell align="center" sx={{ width: 500 }}>actions </TableCell>
-            
+
           </TableRow>
   });
 
@@ -53,10 +53,10 @@ function ApplicantsTable() {
         <TableRow>
         
           
-          <TableCell align="left" sx={{ width: 100 }}>title</TableCell>
-          <TableCell align="left" sx={{ width: 100 }}>title</TableCell>
-          <TableCell align="center" sx={{ width: 100 }}>title</TableCell>
-          <TableCell align="center" sx={{ width: 100 }}>title</TableCell>
+          <TableCell align="left" sx={{ width: 100 }}>Titre</TableCell>
+          <TableCell align="left" sx={{ width: 100 }}>Magasin</TableCell>
+          <TableCell align="center" sx={{ width: 100 }}>Code Postal</TableCell>
+          <TableCell align="center" sx={{ width: 100 }}>Contrat</TableCell>
           <TableCell align="center" sx={{ width: 500 }}>Actions</TableCell>
         </TableRow>
       </TableHead>
