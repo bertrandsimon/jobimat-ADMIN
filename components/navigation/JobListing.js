@@ -7,7 +7,8 @@ import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 
-import JobsTable from '../tables/JobsTable';
+import JobPostForm from '../forms/JobPostForm';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -22,7 +23,9 @@ const drawerWidth = 240;
 const openedMixin = (theme) => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
+    easing: 
+theme.transitions.easing.sharp
+,
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: 'hidden',
@@ -30,7 +33,9 @@ const openedMixin = (theme) => ({
 
 const closedMixin = (theme) => ({
   transition: theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
+    easing: 
+theme.transitions.easing.sharp
+,
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
@@ -58,7 +63,9 @@ const AppBar = styled(MuiAppBar, {
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
+    easing: 
+theme.transitions.easing.sharp
+,
     duration: theme.transitions.duration.leavingScreen,
   }),
   background: 'linear-gradient(90deg, #A10410 6.25%, #C60501 100%)', 
@@ -66,7 +73,9 @@ const AppBar = styled(MuiAppBar, {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
+      easing: 
+theme.transitions.easing.sharp
+,
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
@@ -107,7 +116,7 @@ function JobListing() {
 
   return (
 
-   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
+    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>
@@ -219,66 +228,30 @@ function JobListing() {
       </Drawer>
 
       
-      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0' }}>
+      <Box sx={{ flexGrow: 1, margin:'20px', marginTop:'90px', backgroundColor: '#E7EBF0' }}>
 
         <Grid container spacing={4}>
 
-        <Grid xs={3}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
 
-              <div className={styles.miniCard}>
-                <div className={styles.title}>Nombre de Candidats</div>
-                <div className={styles.numberWrapper}>
-                  <div className={styles.number}>8500</div>
-                  <div className={styles.subTxt}>Annonces</div>  
-                </div>
-               </div>
+          <Grid xs={6}>
 
-            </Paper>
-          </Grid>
-
-          <Grid xs={3}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-              <div className={styles.miniCard}>
-                  <div className={styles.title}>Metric 3</div>
-                  <div className={styles.numberWrapper}>
-                    <div className={styles.number}>XXXX</div>
-                    <div className={styles.subTxt}>Items</div>  
-                  </div>
-               </div>
-            </Paper>
-          </Grid>
-
-          <Grid xs={3}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-            <div className={styles.miniCard}>
-                  <div className={styles.title}>Metric 3</div>
-                  <div className={styles.numberWrapper}>
-                    <div className={styles.number}>XXXX</div>
-                    <div className={styles.subTxt}>Items</div>  
-                  </div>
-               </div>
-            </Paper>
-          </Grid>
-
-          <Grid xs={3}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-              <Image src="/images/chart.jpg" width={500} height={400} />
-            </Paper>
-          </Grid>
-
-          <Grid xs={12}>
-
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-                
-              <JobsTable/>
-
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '1000px' }}>
+                <div>Poster une annonce</div>
+                <JobPostForm/>
             </Paper>
 
           </Grid>
 
-         
+          <Grid xs={6}>
 
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '1142px' }}>
+                <div>Consulter une annonce</div>
+            </Paper>
+
+          </Grid>
+
+          
+        
 
         </Grid>
 
@@ -290,4 +263,4 @@ function JobListing() {
   );
 }
 
-export default JobListing;
+export default JobListing; 
