@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
-
+import Actions from '../navigation/Actions';
 
 function JobsTableLimit() {
 
@@ -39,7 +39,7 @@ function JobsTableLimit() {
             <TableCell align="left" sx={{ width: 100 }}>{data.store.storeName} </TableCell>
             <TableCell align="center" sx={{ width: 100 }}>{data.store.postalCode} </TableCell>
             <TableCell align="center" sx={{ width: 100 }}> {data.contract.type}  </TableCell>
-            <TableCell align="center" sx={{ width: 500 }}>actions </TableCell>
+            <TableCell align="center" sx={{ width: 500 }}><Actions/> </TableCell>
 
           </TableRow>
   });

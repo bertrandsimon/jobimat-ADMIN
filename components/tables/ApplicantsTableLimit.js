@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
-
+import Actions from '../navigation/Actions';
 
 import { orderBy } from 'lodash';
 
@@ -54,7 +54,7 @@ function ApplicantsTableLimit() {
             <TableCell align="left" sx={{ width: 100 }}>{data.surname} </TableCell>
             <TableCell align="center" sx={{ width: 100 }}><div className={styles.eval}><Image src="/images/eval.png" width={68} height={37} /></div></TableCell>
             <TableCell align="center" sx={{ width: 100 }}> {data.offersApplied} </TableCell>
-            <TableCell align="center" sx={{ width: 500 }}>actions </TableCell>
+            <TableCell align="center" sx={{ width: 500 }}><Actions/> </TableCell>
           </TableRow>
   });
 
