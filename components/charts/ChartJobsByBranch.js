@@ -88,4 +88,4 @@ const ChartJobsByBranch = () => {
   );
 };
 
-export default ChartJobsByBranch;
+export default ChartJobsByBranch; 

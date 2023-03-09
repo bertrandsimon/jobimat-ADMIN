@@ -1,38 +1,15 @@
-import styles from "../../styles/ShopsListing.module.css";
-import Link from "next/link";
-import Image from "next/image";
-import ChartJobsByBranch from "../charts/ChartJobsByBranch";
-import { styled, useTheme } from "@mui/material/styles";
-import { useState } from "react";
-import ShopsTable from "../tables/ShopsTable";
-import CircleNivoChart from "../nivoCharts/CircleNivoChart";
-import {
-  MuiDrawer,
-  MuiAppBar,
-  Toolbar,
-  List,
-  CssBaseline,
-  Typography,
-  Divider,
-  IconButton,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  InboxIcon,
-  MailIcon,
-  DashboardIcon,
-  PersonSearchIcon,
-  CreateIcon,
-  QueryStatsIcon,
-  MenuIcon,
-  StoreIcon,
-  Box,
-  Paper,
-  Grid,
-} from "./muiComponentsImport";
+import styles from '../../styles/ShopsListing.module.css';
+import Link from 'next/link';
+import Image from 'next/image';
+
+
+import { styled, useTheme } from '@mui/material/styles';
+import { useState } from 'react';
+import ShopsTable from '../tables/ShopsTable';
+import CircleNivoChart from '../nivoCharts/CircleNivoChart';
+import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
+import TopRightUserInfo from './TopRightUserInfo';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -149,6 +126,8 @@ function ShopsListing() {
           <Typography variant="h6" noWrap component="div">
             Jobimat
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
         </Toolbar>
       </AppBar>
 

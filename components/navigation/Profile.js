@@ -1,5 +1,6 @@
 import styles from '../../styles/Profile.module.css';
 import Link from 'next/link';
+import TopRightUserInfo from './TopRightUserInfo';
 
 function Profile() {
 

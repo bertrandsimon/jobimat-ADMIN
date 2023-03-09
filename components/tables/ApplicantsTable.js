@@ -16,10 +16,13 @@ import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 
 
+import { orderBy } from 'lodash';
 
 function ApplicantsTable() {
 
   const [applicantsData, setApplicantsData] = useState([])
+  const [sortBy, setSortBy] = useState('offersApplied')
+  const [sortOrder, setSortOrder] = useState('desc')
 
   useEffect(() => {
     fetch('http://localhost:3000/admin/applicants')
@@ -30,7 +33,18 @@ function ApplicantsTable() {
       });
   }, []);
 
-  const applicantRow = applicantsData.map((data, i) => {
+  const handleSort = (property) => {
+    if (sortBy === property) {
+      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortBy(property)
+      setSortOrder('desc')
+    }
+  }
+
+  const sortedApplicants = orderBy(applicantsData, [sortBy], [sortOrder])
+
+  const applicantRow = sortedApplicants.map((data, i) => {
     return <TableRow
             key={i}
             sx={{ '&:last-child td, &:last-child th': { border: 0 }  }}
@@ -39,33 +53,30 @@ function ApplicantsTable() {
             <TableCell align="left" sx={{ width: 100 }}>{data.name.charAt(0).toUpperCase() + data.name.slice(1)} </TableCell>
             <TableCell align="left" sx={{ width: 100 }}>{data.surname} </TableCell>
             <TableCell align="center" sx={{ width: 100 }}><div className={styles.eval}><Image src="/images/eval.png" width={68} height={37} /></div></TableCell>
-            <TableCell align="center" sx={{ width: 100 }}> {Math.floor(Math.random() * 26)} </TableCell>
+            <TableCell align="center" sx={{ width: 100 }}> {data.offersApplied} </TableCell>
             <TableCell align="center" sx={{ width: 500 }}>actions </TableCell>
           </TableRow>
   });
 
 
   return (
-
     <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 350 }} aria-label="simple table">
-      <TableHead className={styles.tableHead}>
-        <TableRow>
-        
-          <TableCell align="center" sx={{ width: 50}}>Avatar</TableCell>
-          <TableCell align="left" sx={{ width: 100 }}>Nom</TableCell>
-          <TableCell align="left" sx={{ width: 100 }}>Prénom</TableCell>
-          <TableCell align="center" sx={{ width: 100 }}>Evaluation</TableCell>
-          <TableCell align="center" sx={{ width: 100 }}>Nb offres postulés</TableCell>
-          <TableCell align="center" sx={{ width: 500 }}>Actions</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {applicantRow}
-      </TableBody>
-    </Table>
-  </TableContainer>
-
+      <Table sx={{ minWidth: 350 }} aria-label="simple table">
+        <TableHead className={styles.tableHead}>
+          <TableRow>
+            <TableCell align="center" sx={{ width: 50}}>Avatar</TableCell>
+            <TableCell align="left" sx={{ width: 100 }} onClick={() => handleSort('asc')}>Nom</TableCell>
+            <TableCell align="left" sx={{ width: 100 }} onClick={() => handleSort('surname')}>Prénom</TableCell>
+            <TableCell align="center" sx={{ width: 100 }}>Evaluation</TableCell>
+            <TableCell align="center" sx={{ width: 100 }} onClick={() => handleSort('offersApplied')}>Nb offres postulés</TableCell>
+            <TableCell align="center" sx={{ width: 500 }}>Actions</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {applicantRow}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 

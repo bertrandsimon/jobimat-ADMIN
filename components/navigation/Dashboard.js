@@ -1,40 +1,15 @@
-import styles from "../../styles/Dashboard.module.css";
+import styles from '../../styles/Dashboard.module.css';
 
-import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
-import { useState } from "react";
+import * as React from 'react';
+import { styled, useTheme } from '@mui/material/styles';
+import { useState } from 'react';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-import {
-  MuiDrawer,
-  MuiAppBar,
-  Toolbar,
-  List,
-  CssBaseline,
-  Typography,
-  Divider,
-  IconButton,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  InboxIcon,
-  MailIcon,
-  DashboardIcon,
-  PersonSearchIcon,
-  CreateIcon,
-  QueryStatsIcon,
-  MenuIcon,
-  StoreIcon,
-  Box,
-  Paper,
-  Grid,
-} from "./muiComponentsImport";
-import Charts from "../charts/Charts";
-import ChartJobsByType from "../charts/ChartJobsByType";
+import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
+import Charts from '../charts/Charts';
+import ChartJobsByType from '../charts/ChartJobsByType';
+import TopRightUserInfo from './TopRightUserInfo';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -151,6 +126,8 @@ function Dashboard() {
           <Typography variant="h6" noWrap component="div">
             Jobimat
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
         </Toolbar>
       </AppBar>
 
@@ -248,14 +225,9 @@ function Dashboard() {
         </List>
       </Drawer>
 
-      <Box
-        sx={{
-          flexGrow: 1,
-          margin: "60px",
-          marginTop: "160px",
-          backgroundColor: "#E7EBF0",
-        }}
-      >
+      
+      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0', height:'100%' }}>
+
         <Grid container spacing={4}>
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: "200px" }}>

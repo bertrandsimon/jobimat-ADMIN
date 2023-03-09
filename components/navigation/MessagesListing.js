@@ -5,7 +5,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
-
+import TopRightUserInfo from './TopRightUserInfo';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -125,6 +125,8 @@ function MessagesListing() {
           <Typography variant="h6" noWrap component="div">
             Jobimat
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
         </Toolbar>
       </AppBar>
 

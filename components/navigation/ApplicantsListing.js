@@ -6,7 +6,10 @@ import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 import ApplicantsTable from '../tables/ApplicantsTable';
-
+import TopRightUserInfo from './TopRightUserInfo';
+import PeopleIcon from '@mui/icons-material/People';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -106,7 +109,7 @@ function ApplicantsListing() {
 
   return (
 
-   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
+   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>
@@ -126,7 +129,11 @@ function ApplicantsListing() {
           <Typography variant="h6" noWrap component="div">
             Jobimat
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
         </Toolbar>
+
+       
       </AppBar>
 
       <Drawer variant="permanent" open={open}>
@@ -226,13 +233,52 @@ function ApplicantsListing() {
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
                   <div className={styles.miniCard}>
 
-                    <div className={styles.title}>Nombre de Candidats</div>
-                    <div className={styles.numberWrapper}>
-                      <div className={styles.number}>8500</div>
-                      <div className={styles.subTxt}>Candidats</div>  
+                      <div className={styles.wrapperTop}>
+                        <div className={styles.title}>Candidats</div>
+                        <div className={styles.title2}><span><ExpandLessIcon/>+5 %</span></div>
+                      </div>
+
+                      <div className={styles.wrapperMiddle}>
+                        <div className={styles.number}>8500</div>
+                      </div>
+                      
+                      <div className={styles.wrapperBottom}>
+                        <div className={styles.title3}><span>Voir tous</span></div>
+                        <div className={styles.icon}>
+
+                            <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+                        </div>
+                      </div>
+
+              
+                  </div>
+            </Paper>
+          </Grid>
+
+          <Grid xs={3}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                <div className={styles.miniCard}>
+
+                    <div className={styles.wrapperTop}>
+                      <div className={styles.title}>Candidats</div>
+                      <div className={styles.title4}><span><ExpandMoreIcon/>-12 %</span></div>
                     </div>
 
-                  </div>
+                    <div className={styles.wrapperMiddle}>
+                      <div className={styles.number}>8500</div>
+                    </div>
+
+                    <div className={styles.wrapperBottom}>
+                      <div className={styles.title3}><span>Voir tous</span></div>
+                      <div className={styles.icon}>
+
+                          <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+                      </div>
+                    </div>
+
+                </div>
             </Paper>
           </Grid>
 
@@ -240,27 +286,25 @@ function ApplicantsListing() {
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
               <div className={styles.miniCard}>
 
-                <div className={styles.title}>Metric 2</div>
-                <div className={styles.numberWrapper}>
-                  <div className={styles.number}>3500</div>
-                  <div className={styles.subTxt}>Candidats</div>  
+                  <div className={styles.wrapperTop}>
+                    <div className={styles.title}>Candidats</div>
+                    <div className={styles.title4}><span><ExpandMoreIcon/>+5 %</span></div>
+                  </div>
+
+                  <div className={styles.wrapperMiddle}>
+                    <div className={styles.number}>8500</div>
+                  </div>
+
+                  <div className={styles.wrapperBottom}>
+                    <div className={styles.title3}><span>Voir tous</span></div>
+                    <div className={styles.icon}>
+
+                        <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+                    </div>
+                  </div>
+
                 </div>
-
-              </div>
-            </Paper>
-          </Grid>
-
-          <Grid xs={3}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-            <div className={styles.miniCard}>
-
-              <div className={styles.title}>Metric 3</div>
-              <div className={styles.numberWrapper}>
-                <div className={styles.number}>1500</div>
-                <div className={styles.subTxt}>Candidats</div>  
-              </div>
-
-            </div>
             </Paper>
           </Grid>
 

@@ -5,8 +5,8 @@ import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
-
-
+import ChartJobsByBranch from '../charts/ChartJobsByBranch';
+import TopRightUserInfo from './TopRightUserInfo';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -126,6 +126,8 @@ function Statistics() {
         <Typography variant="h6" noWrap component="div">
           Jobimat
         </Typography>
+        <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
       </Toolbar>
     </AppBar>
 
@@ -220,50 +222,48 @@ function Statistics() {
     
     <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0' }}>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={2}> 
 
-      <Grid xs={3}>
-          <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Statistics page</div>
-          </Paper>
-        </Grid>
+          <Grid xs={3}>
+              <Paper elevation={3} sx={{ padding: 0, height: 800 }}>
+                    <ChartJobsByBranch/>
+              </Paper>
+          </Grid>
 
-        <Grid xs={3}>
-          <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Statistics page</div>
-          </Paper>
-        </Grid>
+          <Grid xs={9}>
+              <Paper elevation={3} sx={{ padding: 3, minHeight: '800px' }}>
+                    
+              <Grid container spacing={2}>
 
-        <Grid xs={3}>
-          <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Statistics page</div>
-          </Paper>
-        </Grid>
+                <Grid xs={4}>
+                  <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>ITEM 2</div>
+                  </Paper>
+                </Grid>
 
-        <Grid xs={3}>
-          <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                <div>Statistics page</div>
-          </Paper>
-        </Grid>
+                <Grid xs={4}>
+                  <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>ITEM 3</div>
+                  </Paper>
+                </Grid>
 
-        <Grid xs={6}>
+                <Grid xs={4}>
+                  <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>ITEM 4</div>
+                  </Paper>
+                </Grid>
 
-          <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-              <div>Statistics page</div>
-          </Paper>
+                <Grid xs={12}>
+                  <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                  <div>ITEM 6</div>
+                  </Paper>
+                </Grid>
 
-        </Grid>
+              </Grid>
 
-        <Grid xs={6}>
+              </Paper>
+          </Grid>
 
-          <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
-              <div>Statistics page</div>
-          </Paper>
-
-        </Grid>
-
-        
-      
 
       </Grid>
 
