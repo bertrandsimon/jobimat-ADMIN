@@ -222,7 +222,7 @@ function Dashboard() {
       </Drawer>
 
       
-      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0' }}>
+      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0', height:'100%' }}>
 
         <Grid container spacing={4}>
 

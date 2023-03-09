@@ -75,7 +75,7 @@ function Signin() {
       </div>
 
       <div className={styles.connect}>
-        <Button sx={{ height: '99%' }} variant="contained" onClick={() => handleSubmit()} disabled={!isFormFilled}>Se Connecter</Button>
+        <Button sx={{ height: '99%' }} color="primary" variant="contained" onClick={() => handleSubmit()} disabled={!isFormFilled}>Se Connecter</Button>
       </div>
 
     </div>
