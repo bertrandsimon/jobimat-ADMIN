@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 import Charts from '../charts/Charts';
 import ChartJobsByType from '../charts/ChartJobsByType';
-
+import TopRightUserInfo from './TopRightUserInfo';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -128,6 +128,8 @@ function Dashboard() {
           <Typography variant="h6" noWrap component="div">
             Jobimat
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
         </Toolbar>
       </AppBar>
 

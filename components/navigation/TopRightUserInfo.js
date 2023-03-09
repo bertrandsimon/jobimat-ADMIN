@@ -9,8 +9,17 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import Badge from '@mui/material/Badge';
 import Tooltip from '@mui/material/Tooltip';
 
+import { useDispatch, useSelector } from 'react-redux';
+
 
 function TopRightUserInfo() {
+
+  const userConnected = useSelector((state) => state.user.userConnected);
+
+  if (!userConnected) {
+    window.location.href = 'http://localhost:3001/login'
+    return null
+  }
 
   const handleLogout = () => {console.log('logout')}
 
