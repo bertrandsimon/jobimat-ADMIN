@@ -261,12 +261,12 @@ function ApplicantsListing() {
                 <div className={styles.miniCard}>
 
                     <div className={styles.wrapperTop}>
-                      <div className={styles.title}>Candidats</div>
+                      <div className={styles.title}>Indicateur 2</div>
                       <div className={styles.title4}><span><ExpandMoreIcon/>-12 %</span></div>
                     </div>
 
                     <div className={styles.wrapperMiddle}>
-                      <div className={styles.number}>8500</div>
+                      <div className={styles.number}>6734</div>
                     </div>
 
                     <div className={styles.wrapperBottom}>
@@ -287,12 +287,12 @@ function ApplicantsListing() {
               <div className={styles.miniCard}>
 
                   <div className={styles.wrapperTop}>
-                    <div className={styles.title}>Candidats</div>
+                    <div className={styles.title}>Indicateur 3</div>
                     <div className={styles.title4}><span><ExpandMoreIcon/>+5 %</span></div>
                   </div>
 
                   <div className={styles.wrapperMiddle}>
-                    <div className={styles.number}>8500</div>
+                    <div className={styles.number}>832</div>
                   </div>
 
                   <div className={styles.wrapperBottom}>
@@ -310,7 +310,28 @@ function ApplicantsListing() {
 
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-            <Image src="/images/chart.jpg" width={500} height={400} />
+            <div className={styles.miniCard}>
+
+                <div className={styles.wrapperTop}>
+                  <div className={styles.title}>Candidats</div>
+                  <div className={styles.title2}><span><ExpandLessIcon/>+5 %</span></div>
+                </div>
+
+                <div className={styles.wrapperMiddle}>
+                  <div className={styles.number}>8500</div>
+                </div>
+
+                <div className={styles.wrapperBottom}>
+                  <div className={styles.title3}><span>Voir tous</span></div>
+                  <div className={styles.icon}>
+
+                      <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+                  </div>
+                </div>
+
+            </div>
+            
             </Paper>
           </Grid>
 

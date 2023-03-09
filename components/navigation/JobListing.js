@@ -11,6 +11,10 @@ import JobsTable from '../tables/JobsTable';
 import TopRightUserInfo from './TopRightUserInfo';
 import JobPostForm from '../forms/JobPostForm';
 
+import PeopleIcon from '@mui/icons-material/People';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -231,34 +235,130 @@ function JobListing() {
       </Drawer>
 
       
-      <Box sx={{ flexGrow: 1, margin:'20px', marginTop:'90px', backgroundColor: '#E7EBF0' }}>
+      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0', height:'100%' }}>
 
-        <Grid container spacing={4}>
+<Grid container spacing={4}>
+
+<Grid xs={3}>
+    <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+          <div className={styles.miniCard}>
+
+              <div className={styles.wrapperTop}>
+                <div className={styles.title}>Candidats</div>
+                <div className={styles.title2}><span><ExpandLessIcon/>+5 %</span></div>
+              </div>
+
+              <div className={styles.wrapperMiddle}>
+                <div className={styles.number}>8500</div>
+              </div>
+              
+              <div className={styles.wrapperBottom}>
+                <div className={styles.title3}><span>Voir tous</span></div>
+                <div className={styles.icon}>
+
+                    <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+                </div>
+              </div>
+
+      
+          </div>
+    </Paper>
+  </Grid>
+
+  <Grid xs={3}>
+    <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+        <div className={styles.miniCard}>
+
+            <div className={styles.wrapperTop}>
+              <div className={styles.title}>Indicateur 2</div>
+              <div className={styles.title4}><span><ExpandMoreIcon/>-12 %</span></div>
+            </div>
+
+            <div className={styles.wrapperMiddle}>
+              <div className={styles.number}>6734</div>
+            </div>
+
+            <div className={styles.wrapperBottom}>
+              <div className={styles.title3}><span>Voir tous</span></div>
+              <div className={styles.icon}>
+
+                  <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+              </div>
+            </div>
+
+        </div>
+    </Paper>
+  </Grid>
+
+  <Grid xs={3}>
+    <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+      <div className={styles.miniCard}>
+
+          <div className={styles.wrapperTop}>
+            <div className={styles.title}>Indicateur 3</div>
+            <div className={styles.title4}><span><ExpandMoreIcon/>+5 %</span></div>
+          </div>
+
+          <div className={styles.wrapperMiddle}>
+            <div className={styles.number}>832</div>
+          </div>
+
+          <div className={styles.wrapperBottom}>
+            <div className={styles.title3}><span>Voir tous</span></div>
+            <div className={styles.icon}>
+
+                <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+            </div>
+          </div>
+
+        </div>
+    </Paper>
+  </Grid>
+
+  <Grid xs={3}>
+    <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+    <div className={styles.miniCard}>
+
+        <div className={styles.wrapperTop}>
+          <div className={styles.title}>Candidats</div>
+          <div className={styles.title2}><span><ExpandLessIcon/>+5 %</span></div>
+        </div>
+
+        <div className={styles.wrapperMiddle}>
+          <div className={styles.number}>8500</div>
+        </div>
+
+        <div className={styles.wrapperBottom}>
+          <div className={styles.title3}><span>Voir tous</span></div>
+          <div className={styles.icon}>
+
+              <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+          </div>
+        </div>
+
+    </div>
+    
+    </Paper>
+  </Grid>
+
+  <Grid xs={12}>
+
+    <Paper elevation={3} sx={{ padding: 3, minHeight: '500px' }}>
+        <JobsTable/>
+    </Paper>
+
+  </Grid>
 
 
-          <Grid xs={6}>
 
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '1000px' }}>
-                <div>Poster une annonce</div>
-                <JobPostForm/>
-            </Paper>
 
-          </Grid>
+</Grid>
 
-          <Grid xs={6}>
-
-            <Paper elevation={3} sx={{ padding: 3, minHeight: '1142px' }}>
-                <div>Consulter une annonce</div>
-            </Paper>
-
-          </Grid>
-
-          
-        
-
-        </Grid>
-
-      </Box>
+</Box>
 
 
     </Box>

@@ -10,6 +10,11 @@ import CircleNivoChart from '../nivoCharts/CircleNivoChart';
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 import TopRightUserInfo from './TopRightUserInfo';
 
+import PeopleIcon from '@mui/icons-material/People';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import ChartJobsByBranch from '../charts/ChartJobsByBranch';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -233,42 +238,7 @@ function ShopsListing() {
           backgroundColor: "#E7EBF0",
         }}
       >
-        {/* <Grid container spacing={4}>
-          <Grid 
-          <Grid xs={4 }>
-            <Paper elevation={3} sx={{ padding: 0, height: 800 }}>
-              <ChartJobsByBranch />
-            </Paper>
-          </Grid>
-
-          <Grid xs={2}>
-            <Paper elevation={3} sx={{ padding: 3, height: "200px" }}>
-              <div></div>
-            </Paper>
-          </Grid>
-
-          <Grid xs={2}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: "200px" }}>
-              <div>
-                <Image src="/images/chart.jpg" width={500} height={400} />
-              </div>
-            </Paper>
-          </Grid>
-
-          <Grid xs={2}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: "200px" }}>
-              <div>
-                <Image src="/images/chart.jpg" width={500} height={400} />
-              </div>
-            </Paper>
-          </Grid>
-          <Grid xs={4}></Grid>
-          <Grid xs={8}>
-            <Paper elevation={3} sx={{ padding: 3, minHeight: "500px" }}>
-              <ShopsTable />
-            </Paper>
-          </Grid>
-        </Grid> */}
+      
         <Grid container spacing={2}>
           <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 0, height: 800 }}>
