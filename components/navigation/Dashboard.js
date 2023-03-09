@@ -9,10 +9,16 @@ import Link from 'next/link';
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 import Charts from '../charts/Charts';
 import ChartJobsByType from '../charts/ChartJobsByType';
+import ApplicantsTableLimit from '../tables/ApplicantsTableLimit';
+import JobsTableLimit from '../tables/JobsTableLimit';
+
 import TopRightUserInfo from './TopRightUserInfo';
 import PeopleIcon from '@mui/icons-material/People';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -348,7 +354,24 @@ function Dashboard() {
               <ChartJobsByType />
             </Paper>
           </Grid>
+
+
+          <Grid xs={6}>
+            <Paper elevation={4} sx={{ padding: 3, height: "100%" }}>
+              <ApplicantsTableLimit/>
+            </Paper>
+          </Grid>
+
+          <Grid xs={6}>
+            <Paper elevation={4} sx={{ padding: 3, height: "100%" }}>
+              <JobsTableLimit/>
+            </Paper>
+          </Grid>
+
+
         </Grid>
+
+
       </Box>
     </Box>
   );
