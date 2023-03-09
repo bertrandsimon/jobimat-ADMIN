@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 import ApplicantsTable from '../tables/ApplicantsTable';
-
+import TopRightUserInfo from './TopRightUserInfo';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -106,7 +106,7 @@ function ApplicantsListing() {
 
   return (
 
-   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
+   <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>
@@ -126,7 +126,11 @@ function ApplicantsListing() {
           <Typography variant="h6" noWrap component="div">
             Jobimat
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <TopRightUserInfo />
         </Toolbar>
+
+       
       </AppBar>
 
       <Drawer variant="permanent" open={open}>
