@@ -9,11 +9,12 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import Badge from '@mui/material/Badge';
 import Tooltip from '@mui/material/Tooltip';
 
+import { loggedStatus, loggedName, loggedToken } from '../../reducers/user';
 import { useDispatch, useSelector } from 'react-redux';
 
 
 function TopRightUserInfo() {
-
+  const dispatch = useDispatch();
   const userConnected = useSelector((state) => state.user.userConnected);
 
   if (!userConnected) {
@@ -21,7 +22,11 @@ function TopRightUserInfo() {
     return null
   }
 
-  const handleLogout = () => {console.log('logout')}
+  const handleLogout = () => {
+    dispatch(loggedStatus())
+    dispatch(loggedName(''))
+    dispatch(loggedToken(''))
+  }
 
   return (
 
