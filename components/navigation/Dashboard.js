@@ -232,10 +232,17 @@ function Dashboard() {
           </Link>
         </List>
       </Drawer>
-
+            
       
       <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0', height:'100vh' }}>
-
+        
+      <div style={{marginBottom: '50px'}}>
+        <hr />
+          <h2>Dashboard</h2>
+        <hr />
+      </div>
+     
+        
         <Grid container spacing={4}>
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>

@@ -236,35 +236,41 @@ function JobListing() {
 
       
       <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0', height:'100%' }}>
-
-<Grid container spacing={4}>
-
-<Grid xs={3}>
-    <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-          <div className={styles.miniCard}>
-
-              <div className={styles.wrapperTop}>
-                <div className={styles.title}>Candidats</div>
-                <div className={styles.title2}><span><ExpandLessIcon/>+5 %</span></div>
-              </div>
-
-              <div className={styles.wrapperMiddle}>
-                <div className={styles.number}>8500</div>
-              </div>
-              
-              <div className={styles.wrapperBottom}>
-                <div className={styles.title3}><span>Voir tous</span></div>
-                <div className={styles.icon}>
-
-                    <IconButton color="inherit"><PeopleIcon /></IconButton>
-
-                </div>
-              </div>
-
       
-          </div>
-    </Paper>
-  </Grid>
+      <div style={{marginBottom: '50px'}}>
+        <hr />
+          <h2>Offres postées</h2>
+        <hr />
+      </div>
+
+      <Grid container spacing={4}>
+
+      <Grid xs={3}>
+          <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+                <div className={styles.miniCard}>
+
+                    <div className={styles.wrapperTop}>
+                      <div className={styles.title}>Candidats</div>
+                      <div className={styles.title2}><span><ExpandLessIcon/>+5 %</span></div>
+                    </div>
+
+                    <div className={styles.wrapperMiddle}>
+                      <div className={styles.number}>8500</div>
+                    </div>
+                    
+                    <div className={styles.wrapperBottom}>
+                      <div className={styles.title3}><span>Voir tous</span></div>
+                      <div className={styles.icon}>
+
+                          <IconButton color="inherit"><PeopleIcon /></IconButton>
+
+                      </div>
+                    </div>
+
+            
+                </div>
+          </Paper>
+        </Grid>
 
   <Grid xs={3}>
     <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>

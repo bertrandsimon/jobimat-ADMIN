@@ -52,7 +52,7 @@ function TopRightUserInfo() {
     <div className={styles.userInfoWrapper}>
 
       <Avatar alt="Remy Sharp" src="/images/1.jpg" />
-      <span>Cynthia Duval</span>
+      <span>Anthony Doumer (Gedimat Paris)</span>
 
       <Button variant="contained" onClick={handleClickOpen}>Poster une annonce</Button>
 

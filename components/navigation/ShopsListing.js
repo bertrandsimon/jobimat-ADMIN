@@ -238,6 +238,12 @@ function ShopsListing() {
           backgroundColor: "#E7EBF0",
         }}
       >
+
+        <div style={{marginBottom: '50px'}}>
+          <hr />
+            <h2>Magasins</h2>
+          <hr />
+        </div>
       
         <Grid container spacing={2}>
           <Grid xs={3}>

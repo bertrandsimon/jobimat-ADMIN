@@ -224,6 +224,12 @@ function MessagesListing() {
 
       
       <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0' }}>
+        
+        <div style={{marginBottom: '50px'}}>
+          <hr />
+            <h2>Messages</h2>
+          <hr />
+        </div>
 
         <Grid container spacing={4}>
 
