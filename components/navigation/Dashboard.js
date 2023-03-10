@@ -16,8 +16,8 @@ import TopRightUserInfo from './TopRightUserInfo';
 import PeopleIcon from '@mui/icons-material/People';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-
+import Pie from '../reCharts/Pie';
+import Bar from '../reCharts/Bar';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -244,6 +244,19 @@ function Dashboard() {
      
         
         <Grid container spacing={4}>
+
+        <Grid xs={6}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+             <Pie/>
+            </Paper>
+          </Grid>
+
+          <Grid xs={6}>
+            <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
+              <Bar/>
+            </Paper>
+          </Grid>
+
         <Grid xs={3}>
             <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
                   <div className={styles.miniCard}>

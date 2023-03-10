@@ -9,6 +9,22 @@ const ChartJobsByBranch = () => {
   const [jobsByBranch, setJobsByBranch] = useState([]);
   const [branch, setBranch] = useState([]);
 
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const url = "http://localhost:3000/stats/jobsByBranch";
+  //     try {
+  //       const response = await fetch(url);
+  //       const data = await response.json();
+  //       console.log(data);
+  //       setJobsByBranch(Object.values(data.adherent));
+  //       setBranch(Object.keys(data.adherent));
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   getData();
+  // }, []);
+
   useEffect(() => {
     const getData = async () => {
       const url = "http://localhost:3000/stats/jobsByBranch";
@@ -16,8 +32,10 @@ const ChartJobsByBranch = () => {
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
-        setJobsByBranch(Object.values(data.adherent));
-        setBranch(Object.keys(data.adherent));
+        const jobs = Object.values(data.adherent).slice(0, 10); // limit to 10 results
+        const branches = Object.keys(data.adherent).slice(0, 10); // limit to 10 results
+        setJobsByBranch(jobs);
+        setBranch(branches);
       } catch (error) {
         console.log(error);
       }
@@ -74,7 +92,7 @@ const ChartJobsByBranch = () => {
         width: "100%",
       }}
     >
-      <h3>TOP FRANCHISES</h3>
+      <h4 style={{ fontSize: '16px', color: 'grey', textTransform: 'uppercase' }}>TOP 10 MAGASINS</h4>
       <div style={{ height: "95%", width: "100%" }}>
         <Chart
           options={options}

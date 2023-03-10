@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { MuiDrawer, MuiAppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ChevronLeftIcon, ChevronRightIcon, ListItem, ListItemButton, ListItemIcon, ListItemText, InboxIcon, MailIcon, DashboardIcon, PersonSearchIcon, CreateIcon, QueryStatsIcon, MenuIcon, StoreIcon, Box, Paper, Grid } from './muiComponentsImport';
 import ChartJobsByBranch from '../charts/ChartJobsByBranch';
 import TopRightUserInfo from './TopRightUserInfo';
+import Pie from '../reCharts/Pie';
+import Bar from '../reCharts/Bar';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -241,30 +243,18 @@ function Statistics() {
                     
               <Grid container spacing={2}>
 
-                <Grid xs={4}>
+                <Grid xs={8}>
                   <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>ITEM 2</div>
+                  <Pie></Pie>
                   </Paper>
                 </Grid>
 
                 <Grid xs={4}>
                   <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>ITEM 3</div>
+                  <Bar></Bar>
                   </Paper>
                 </Grid>
-
-                <Grid xs={4}>
-                  <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>ITEM 4</div>
-                  </Paper>
-                </Grid>
-
-                <Grid xs={12}>
-                  <Paper elevation={3} sx={{ padding: 3, minHeight: '200px' }}>
-                  <div>ITEM 6</div>
-                  </Paper>
-                </Grid>
-
+               
               </Grid>
 
               </Paper>

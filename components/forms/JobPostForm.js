@@ -7,10 +7,15 @@ import * as React from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { useEffect } from 'react';
 // MUI IMPORTS
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel'; 
 
 // STYLES IMPORT
 
@@ -24,23 +29,44 @@ function JobPostForm() {
   const [date, setDate] = useState('');
   const [reference, setReference] = useState('');
   const [description, setDescription] = useState('');
-  const [contract, setContract] = useState('');
-  const [store, setStore] = useState('');
-  const [jobType, setJobType] = useState('');
+  const [contract, setContract] = useState([]);
+  const [store, setStore] = useState([]);
+  const [jobType, setJobType] = useState([]);
   const [jobImage, setJobImage] = useState(''); 
 
+  const [value, setValue] = useState([0]);
+  const [inputValue, setInputValue] = useState('');
+
+  const obj= [{id: "63fc9578c0f8f6ccc70feaea", type: "cdi" }, {id: "63fc96bdc0f8f6ccc70feaeb", type: "cdd"}, {id: "63ff4c8f67f60b5da619387b", type:"stage"}, {id: "6401c3676564a9fab0847429", type: "stage"}, {id: "6401c3766564a9fab084742a", type: "apprentissage"}, {id: "6401c38c6564a9fab084742b", type: "interim"}];
+
+  const newArray= []
+  obj.forEach((el) => {
+    newArray.push({label: el.type, id: 
+el.id
+});
+    })
+console.log(newArray);
   
   const handleSubmit = () => {
     fetch('http://localhost:3000/jobs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title }),
+      body: JSON.stringify({ title, description, date, reference, contract: contract }),
     }).then(response => response.json())
       .then(data => 
        console.log(data)
       );
   };
-
+console.log(value)
+  useEffect(() => {
+    fetch ('http://localhost:3000/admin/contracts')
+    .then (response => response.json())
+    .then(data =>
+      setContract(data.contracts.filter(x => x.type))
+      
+      );
+  }, [])
+console.log(contract)
 
   return (
   <div className={styles.container}>
@@ -51,6 +77,7 @@ function JobPostForm() {
 
     <div className={
 styles.email
+
 }>
       <TextField
           id="outlined-multiline-static"
@@ -64,6 +91,7 @@ styles.email
 
     <div className={
 styles.email
+
 }>
       <TextField
           id="outlined-multiline-static"
@@ -79,6 +107,7 @@ styles.email
 
     <div className={
 styles.email
+
 }>
       <TextField
           id="outlined-multiline-static"
@@ -92,6 +121,7 @@ styles.email
 
     <div className={
 styles.email
+
 }>
       <TextField
           id="outlined-multiline-static"
@@ -105,19 +135,26 @@ styles.email
 
     <div className={
 styles.email
+
 }>
-      <TextField
-          id="outlined-multiline-static"
-          label="Contrat"
-          multiline
-          sx={{ m: 1, width: '500px' }}
-          rows={1}
-          onChange={(e) => setContract(e.target.value)}
-        />
+   <FormControl fullWidth>
+                    <InputLabel>Anglais</InputLabel>
+                    <Select
+                      value={contract}
+                      label="Contrat"
+                      onChange={(e) => setContract(e.target.value)}
+                    >
+                      <MenuItem value={'63fc9578c0f8f6ccc70feaea'}>CDI</MenuItem> 
+                      <MenuItem value={50}>Moyen</MenuItem>
+                      <MenuItem value={100}>Bilingue</MenuItem>
+                    </Select>
+                </FormControl> 
+     
     </div>
 
     <div className={
 styles.email
+
 }>
       <TextField
           id="outlined-multiline-static"
@@ -131,6 +168,7 @@ styles.email
 
     <div className={
 styles.email
+
 }>
       <TextField
           id="outlined-multiline-static"
@@ -145,6 +183,7 @@ styles.email
 
     <div className={
 styles.email
+
 } style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
       <input
         accept="image/*"
