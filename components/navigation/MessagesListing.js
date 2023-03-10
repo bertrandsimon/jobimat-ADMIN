@@ -109,7 +109,7 @@ function MessagesListing() {
 
   return (
 
-    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100%' }}>
+    <Box sx={{ display: 'flex', backgroundColor: '#E7EBF0', height:'100vh' }}>
       <CssBaseline />
 
       <AppBar position="fixed" open={open} elevation={0}>
@@ -223,7 +223,7 @@ function MessagesListing() {
       </Drawer>
 
       
-      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0' }}>
+      <Box sx={{ flexGrow: 1, margin:'60px', marginTop:'160px', backgroundColor: '#E7EBF0', height:'100%' }}>
         
         <div style={{marginBottom: '50px'}}>
           <hr />
