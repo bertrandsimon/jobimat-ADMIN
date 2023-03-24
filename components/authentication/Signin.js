@@ -36,7 +36,7 @@ function Signin() {
         dispatch(loggedStatus())
         dispatch(loggedName(data.name))
         dispatch(loggedToken(data.token))
-        //window.location.href = 'http://localhost:3001/dashboard'
+        window.location.href = 'https://recruitment-app-admin.vercel.app/dashboard'
       });
   };
 

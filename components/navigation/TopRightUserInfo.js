@@ -24,7 +24,7 @@ function TopRightUserInfo() {
   const userConnected = useSelector((state) => state.user.userConnected);
 
   if (!userConnected) {
-    //window.location.href = 'http://localhost:3001/login'
+    window.location.href = 'https://recruitment-app-admin.vercel.app/login'
     return null
   }
   const [open, setOpen] = useState(false);
