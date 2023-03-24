@@ -48,7 +48,7 @@ el.id
 console.log(newArray);
   
   const handleSubmit = () => {
-    fetch('http://localhost:3000/jobs', {
+    fetch('https://jobimat-backend-final.vercel.app/jobs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, date, reference, contract: contract }),
@@ -59,7 +59,7 @@ console.log(newArray);
   };
 console.log(value)
   useEffect(() => {
-    fetch ('http://localhost:3000/admin/contracts')
+    fetch ('https://jobimat-backend-final.vercel.app/admin/contracts')
     .then (response => response.json())
     .then(data =>
       setContract(data.contracts.filter(x => x.type))

@@ -11,7 +11,7 @@ const ChartJobsByBranch = () => {
 
   // useEffect(() => {
   //   const getData = async () => {
-  //     const url = "http://localhost:3000/stats/jobsByBranch";
+  //     const url = "https://jobimat-backend-final.vercel.app/stats/jobsByBranch";
   //     try {
   //       const response = await fetch(url);
   //       const data = await response.json();
@@ -27,7 +27,7 @@ const ChartJobsByBranch = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const url = "http://localhost:3000/stats/jobsByBranch";
+      const url = "https://jobimat-backend-final.vercel.app/stats/jobsByBranch";
       try {
         const response = await fetch(url);
         const data = await response.json();

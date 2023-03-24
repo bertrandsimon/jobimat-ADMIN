@@ -13,7 +13,7 @@ const Charts = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const url = "http://localhost:3000/stats/perYears";
+      const url = "https://jobimat-backend-final.vercel.app/stats/perYears";
       try {
         const response = await fetch(url);
         const data = await response.json();

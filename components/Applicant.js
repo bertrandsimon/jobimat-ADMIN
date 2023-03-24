@@ -110,7 +110,7 @@ export default function CollapsibleTable() {
   const [allApplicants, setAllApplicants] = useState([]);
   useEffect(() => {
     console.log("test");
-    fetch("http://localhost:3000/admin/applicants")
+    fetch("https://jobimat-backend-final.vercel.app/admin/applicants")
       .then((response) => response.json())
       .then((data) => {
         setAllApplicants(data.allApplicants);

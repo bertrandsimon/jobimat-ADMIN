@@ -21,7 +21,7 @@ function ShopsTable() {
   const [shopsData, setShopsData] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/admin/stores')
+    fetch('https://jobimat-backend-final.vercel.app/admin/stores')
       .then(response => response.json())
       .then(data => {
         

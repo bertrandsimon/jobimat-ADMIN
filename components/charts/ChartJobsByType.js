@@ -11,7 +11,7 @@ const ChartJobsByType = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const url = "http://localhost:3000/stats/jobsByType";
+      const url = "https://jobimat-backend-final.vercel.app/stats/jobsByType";
       try {
         const response = await fetch(url);
         const data = await response.json();

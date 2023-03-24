@@ -26,7 +26,7 @@ function Signin() {
 
 
   const handleSubmit = () => {
-    fetch('http://localhost:3000/users/signin', {
+    fetch('https://jobimat-backend-final.vercel.app/users/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -36,7 +36,7 @@ function Signin() {
         dispatch(loggedStatus())
         dispatch(loggedName(data.name))
         dispatch(loggedToken(data.token))
-        window.location.href = 'http://localhost:3001/dashboard'
+        //window.location.href = 'http://localhost:3001/dashboard'
       });
   };
 

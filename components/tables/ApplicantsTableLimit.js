@@ -25,7 +25,7 @@ function ApplicantsTableLimit() {
   const [sortOrder, setSortOrder] = useState('desc')
 
   useEffect(() => {
-    fetch('http://localhost:3000/admin/applicants')
+    fetch('https://jobimat-backend-final.vercel.app/admin/applicants')
       .then(response => response.json())
       .then(data => {
         
